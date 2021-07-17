@@ -1,0 +1,26 @@
+<div class="main-containaer">
+    <div class="option-bar">
+        <div class="header">
+            Sorting Visualizer  <p  style="display: inline; font-size: 8px; user-select: none;">( Insertion sort only now planing to add more in the future)</p>
+        </div>
+        <div class="option-container">
+            <button id="sort" (click)="insertionSort(list)">sort</button>
+            <button id="gene" (click)="generat()">generat</button>
+            <button id="stop" (click)="generat()" disabled>Stop</button>
+        </div>
+    </div>
+    
+    <div class="containaer" >
+        <div *ngFor="let culom of list ;let i = index;trackBy:trackByIdx" class="culom" id={{i}}  style="height: {{culom *10}}px;" >
+            {{culom}}
+            <!-- <ng-template #arrow></ng-template> -->
+            <!-- let i = index;trackBy:trackByIdx -->
+            <!-- <input type="text" style="display: none;" [(ngModel)]="list[i]"> -->
+        </div>
+    </div>  
+
+    <h1 id="res">{{test}}</h1> 
+
+    
+
+</div>
